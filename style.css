@@ -87,10 +87,19 @@ main {
 .data-item h5 { color: var(--sage-green); margin-bottom: 0.5rem;}
 
 /* Purpose Tabs */
-.purpose-tabs { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 2rem; }
+.purpose-category-label {
+    width: 100%;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--sage-green);
+    margin-bottom: 0.5rem;
+    padding-left: 0.5rem;
+    border-left: 4px solid var(--terracotta);
+}
+.purpose-tabs { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 2rem; justify-content: flex-start; }
 .purpose-btn {
-    padding: 0.8rem 1.5rem;
-    border-radius: 30px;
+    padding: 0.8rem 1rem;
+    border-radius: 12px;
     border: 1px solid var(--taupe);
     background: transparent;
     color: var(--text-color);
@@ -105,15 +114,70 @@ main {
 .purpose-content.active { display: block; }
 @keyframes fadeIn { from {opacity: 0; transform: translateY(10px);} to {opacity: 1; transform: translateY(0);} }
 
-/* Flip Cards */
-.flip-cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; }
-.flip-card { background-color: transparent; height: 280px; perspective: 1000px; cursor: pointer; }
-.flip-card-inner { position: relative; width: 100%; height: 100%; text-align: center; transition: transform 0.6s; transform-style: preserve-3d; }
-.flip-card:hover .flip-card-inner { transform: rotateY(180deg); }
-.flip-card-front, .flip-card-back { position: absolute; width: 100%; height: 100%; -webkit-backface-visibility: hidden; backface-visibility: hidden; border-radius: 16px; padding: 2rem; display: flex; flex-direction: column; justify-content: center; align-items: center; background: var(--taupe-light); border: 1px solid var(--taupe); }
-.flip-card-front h4 { font-size: 1.4rem; color: var(--sage-green); margin-bottom: 0.5rem; }
-.flip-card-back { background: var(--sage-light); border-color: var(--sage-green); transform: rotateY(180deg); text-align: left; align-items: flex-start; }
-.flip-card-back h5 { color: var(--text-color); margin-bottom: 0.5rem; font-size: 1.1rem; }
+/* Medication Cards */
+.med-cards-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+@media (max-width: 768px) { .med-cards-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .med-cards-grid { grid-template-columns: 1fr; } }
+.med-card { background: var(--taupe-light); border: 1px solid var(--taupe); border-radius: 16px; padding: 2rem; text-align: center; cursor: pointer; transition: all 0.3s; }
+.med-card:hover { transform: translateY(-5px); box-shadow: var(--hover-shadow); border-color: var(--sage-green); background: var(--sage-light); }
+.med-card h4 { font-size: 1.4rem; color: var(--sage-green); margin-bottom: 0.5rem; }
+.med-card p { color: var(--text-muted); }
+
+/* Medication Modal Details */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(74, 68, 61, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+.modal-content {
+    background: var(--card-bg);
+    padding: 3rem;
+    border-radius: 20px;
+    max-width: 600px;
+    width: 90%;
+    max-height: 85vh;
+    overflow-y: auto;
+    position: relative;
+    transform: scale(0.9);
+    transition: all 0.3s ease;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+.modal-overlay.active .modal-content {
+    transform: scale(1);
+}
+.close-btn {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: color 0.2s;
+}
+.close-btn:hover { color: var(--terracotta); }
+.modal-title { color: var(--sage-green); margin-bottom: 2rem; border-bottom: 2px solid var(--sage-light); padding-bottom: 1rem;}
+
+.med-detail-box { margin-bottom: 1.5rem; }
+.med-detail-box h5 { color: var(--terracotta); font-size: 1.1rem; border-bottom: 1px dashed var(--terracotta-light); padding-bottom: 0.3rem; margin-bottom: 0.5rem; }
+.med-detail-box ul { padding-left: 1.5rem; color: var(--text-color); }
+.med-detail-box li { margin-bottom: 0.5rem; }
+.med-detail-box img { width: 100%; max-height: 300px; object-fit: contain; border-radius: 12px; margin-top: 1rem; box-shadow: 0 4px 15px rgba(0,0,0,0.08); background: white; padding: 0.5rem;}
 
 /* Role Play Interactive Engine */
 .rp-char-select { display: flex; gap: 2rem; justify-content: center; margin-top: 2rem; }

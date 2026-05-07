@@ -1,3 +1,25 @@
+// --- Modal Logic ---
+function openModal(id) {
+    document.getElementById(id).classList.add('active');
+}
+
+function closeModal(id) {
+    document.getElementById(id).classList.remove('active');
+    if(id === 'modal-roleplay') {
+        resetRoleplay();
+    }
+}
+
+window.onclick = function(event) {
+    const modals = document.querySelectorAll('.modal-overlay');
+    modals.forEach(modal => {
+        if (event.target === modal) {
+            modal.classList.remove('active');
+            if(modal.id === 'modal-roleplay') resetRoleplay();
+        }
+    });
+}
+
 // --- Intersection Observer for Fade-In ---
 document.addEventListener('DOMContentLoaded', () => {
     const observer = new IntersectionObserver((entries, obs) => {
