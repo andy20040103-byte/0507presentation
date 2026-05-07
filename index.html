@@ -30,6 +30,7 @@
                         <li><strong>性質：</strong>微血管畸形</li>
                         <li><strong>外觀：</strong>出生即有，平坦紅斑</li>
                         <li><strong>預後：</strong>會隨年齡按比例放大，未來可能變厚或產生結節。</li>
+                        <li style="color: var(--terracotta); margin-top: 0.5rem;"><i class="fas fa-exclamation-circle"></i> <strong>SWS 警訊：</strong>需高度懷疑是否合併 Sturge-Weber syndrome (大腦與眼部微血管畸形)，可能引發癲癇與青光眼。</li>
                     </ul>
                 </div>
                 <div class="diag-box khe">
@@ -65,9 +66,14 @@
             </div>
 
             <div class="diag-box" style="background: var(--taupe-light); border-color: var(--taupe);">
-                <h4>🤔 照護困境：血小板偏低，該輸血小板嗎？</h4>
+                <h4>🤔 照護困境：血品輸注指引 (2026 最新實證)</h4>
                 <p><strong>家屬直覺：</strong>數字太低了，趕快輸血小板補充！</p>
-                <p><strong>實證醫學：</strong>「不應常規輸注血小板」。輸入的新鮮血小板會立刻被腫瘤吞噬，反而加劇腫瘤發炎腫脹與凝血因子消耗（火上加油），僅在活動性大出血或術前才考慮給予。</p>
+                <p><strong>實證醫學指引：</strong></p>
+                <ul style="padding-left: 1.5rem; margin-top: 0.5rem;">
+                    <li><strong style="color: var(--terracotta);">血小板 (Platelets)：絕對不應常規輸注。</strong>輸入的血小板會被腫瘤立刻吞噬並釋放血管新生因子，加劇腫瘤腫脹（火上加油），僅在活動性大出血或術前才給予。</li>
+                    <li><strong>冷沉澱品 (Cryoprecipitate)：</strong>當纖維蛋白原 (Fibrinogen) < 1.0 g/L 時給予。</li>
+                    <li><strong>紅血球 (PRBC)：</strong>用於嚴重貧血 (Hb < 60-70 g/L)。</li>
+                </ul>
             </div>
         </section>
 
@@ -75,12 +81,23 @@
         <section class="content-section fade-in">
             <h2 class="section-title"><i class="fas fa-bullseye"></i> 03 / 目的導向治療方針</h2>
             <p style="margin-bottom: 2rem; color: var(--text-muted);">選擇我們目前的臨床目標，查看對應的治療策略：</p>
-            
+            <div class="purpose-category-label" style="color: var(--terracotta); border-color: var(--terracotta);"><i class="fas fa-exclamation-circle"></i> 針對右腿 (KHE 與 KMP 危機)</div>
+            <div class="purpose-tabs" style="margin-bottom: 1.5rem;">
+                <button class="purpose-btn active" onclick="showPurpose('p1')">搶救凝血異常</button>
+                <button class="purpose-btn" onclick="showPurpose('p2')">快速控制急性發炎</button>
+                <button class="purpose-btn" onclick="showPurpose('p6')">非藥物與介入治療</button>
+                <button class="purpose-btn" onclick="showPurpose('p7')">KHE 治療流程圖</button>
+            </div>
+
+            <div class="purpose-category-label" style="color: var(--sage-green); border-color: var(--sage-green);"><i class="fas fa-eye"></i> 針對右臉 (PWB 與 SWS 危機)</div>
+            <div class="purpose-tabs" style="margin-bottom: 1.5rem;">
+                <button class="purpose-btn" onclick="showPurpose('p4')">改善右臉外觀</button>
+                <button class="purpose-btn" onclick="showPurpose('p5')">SWS 預防與共病</button>
+            </div>
+
+            <div class="purpose-category-label" style="color: var(--taupe); border-color: var(--taupe);"><i class="fas fa-shield-alt"></i> 全局雙重防護 (一石二鳥)</div>
             <div class="purpose-tabs">
-                <button class="purpose-btn active" onclick="showPurpose('p1')">目標 1: 搶救凝血異常 (KMP)</button>
-                <button class="purpose-btn" onclick="showPurpose('p2')">目標 2: 快速控制急性發炎</button>
-                <button class="purpose-btn" onclick="showPurpose('p3')">目標 3: 預防血小板聚集</button>
-                <button class="purpose-btn" onclick="showPurpose('p4')">目標 4: 改善右臉外觀</button>
+                <button class="purpose-btn" onclick="showPurpose('p3')">預防血小板聚集 (Aspirin)</button>
             </div>
 
             <div id="p1" class="purpose-content active">
@@ -107,60 +124,52 @@
                 <p><strong>為何選用：</strong>針對右臉的酒色斑。早期（嬰兒期）介入效果最顯著。</p>
                 <p><strong>衛教重點：</strong>需向父母解釋這是長期抗戰，病灶會淡化但極難完全消失。</p>
             </div>
+            <div id="p5" class="purpose-content">
+                <h3 style="color: var(--sage-green); margin-bottom: 1rem;"><i class="fas fa-check-circle"></i> 首選策略：低劑量 Aspirin + 症狀控制用藥</h3>
+                <p><strong>為何選用：</strong>UpToDate 強烈建議所有 SWS 嬰幼兒及早使用低劑量 Aspirin 以預防缺血性腦傷與中風。若發生癲癇，則需投以抗癲癇藥物；若併發青光眼，需即時使用降眼壓藥水。</p>
+                <p><strong>衛教重點：</strong>除了腿部的凝血危機，家長必須了解「看見皮膚，要想著大腦」的觀念。SWS 是一場長期的神經與視力保衛戰。</p>
+            </div>
+            <div id="p6" class="purpose-content">
+                <h3 style="color: var(--sage-green); margin-bottom: 1rem;"><i class="fas fa-check-circle"></i> 非藥物策略：局部壓迫、動脈栓塞與手術</h3>
+                <p><strong>局部壓迫 (Local Compression)：</strong>針對四肢的 KHE (如小玫瑰的右腿)，透過物理壓迫阻斷血流，能誘發腫瘤細胞缺氧凋亡，是絕佳的中期輔助手段。</p>
+                <p><strong>經動脈栓塞 (TAE)：</strong>用於危及生命的 KMP 或術前準備，能快速減少腫瘤血流並提升血小板。但極易產生側支循環，不能單獨使用，必須搭配藥物。</p>
+                <p><strong>手術切除：</strong>僅限「無併發 KMP 且小而侷限」的病灶，因切除不全復發率高 (15%) 且有大出血風險。</p>
+            </div>
+            <div id="p7" class="purpose-content">
+                <h3 style="color: var(--sage-green); margin-bottom: 1rem;"><i class="fas fa-project-diagram"></i> KHE 治療指引流程圖</h3>
+                <p style="margin-bottom: 1rem;">此為國際指引與最新文獻 (Tian 2026) 所建議之 KHE 治療決策流程，涵蓋藥物與非藥物的全方位策略：</p>
+                <img src="KHE therapy flowchart.jpg" alt="KHE Therapy Flowchart" style="width: 100%; max-height: 500px; object-fit: contain; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); background: white; padding: 1rem;">
+            </div>
         </section>
 
         <!-- Section 4: Medications -->
         <section class="content-section fade-in">
             <h2 class="section-title"><i class="fas fa-book-medical"></i> 04 / 藥物百科</h2>
-            <p style="text-align: center; color: var(--text-muted); margin-bottom: 2rem;">游標懸停查看詳細機轉與副作用</p>
-            <div class="flip-cards-grid">
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <h4>Sirolimus</h4>
-                            <p>西羅莫司</p>
-                        </div>
-                        <div class="flip-card-back">
-                            <h5>mTOR 抑制劑</h5>
-                            <p>阻斷血管生成。風險：免疫抑制、易感染。需預防肺炎。</p>
-                        </div>
-                    </div>
+            <p style="text-align: center; color: var(--text-muted); margin-bottom: 2rem;">點擊藥物卡片查看詳細機轉與副作用</p>
+            <div class="med-cards-grid">
+                <div class="med-card" onclick="openModal('modal-sirolimus')">
+                    <h4>Sirolimus</h4>
+                    <p>西羅莫司 (mTOR 抑制劑)</p>
                 </div>
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <h4>Corticosteroids</h4>
-                            <p>皮質類固醇</p>
-                        </div>
-                        <div class="flip-card-back">
-                            <h5>強效抗發炎</h5>
-                            <p>風險：影響發育、月亮臉。需隨後減量。</p>
-                        </div>
-                    </div>
+                <div class="med-card" onclick="openModal('modal-corticosteroids')">
+                    <h4>Corticosteroids</h4>
+                    <p>全身性皮質類固醇</p>
                 </div>
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <h4>Vincristine</h4>
-                            <p>長春新鹼</p>
-                        </div>
-                        <div class="flip-card-back">
-                            <h5>促進內皮凋亡</h5>
-                            <p>風險：發泡劑，漏針會組織壞死。需打中央靜脈導管。</p>
-                        </div>
-                    </div>
+                <div class="med-card" onclick="openModal('modal-vincristine')">
+                    <h4>Vincristine</h4>
+                    <p>長春新鹼 (化療藥物)</p>
                 </div>
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <h4>Aspirin</h4>
-                            <p>阿斯匹靈</p>
-                        </div>
-                        <div class="flip-card-back">
-                            <h5>抗血小板凝集</h5>
-                            <p>防止血小板在腫瘤內繼續聚集，打破 KMP 惡性循環。</p>
-                        </div>
-                    </div>
+                <div class="med-card" onclick="openModal('modal-aspirin')">
+                    <h4>Aspirin</h4>
+                    <p>阿斯匹靈 (抗血小板藥物)</p>
+                </div>
+                <div class="med-card" onclick="openModal('modal-antiseizure')">
+                    <h4>Antiseizure Meds</h4>
+                    <p>抗癲癇藥物 (SWS神經保護)</p>
+                </div>
+                <div class="med-card" onclick="openModal('modal-glaucoma')">
+                    <h4>Anti-glaucoma Drops</h4>
+                    <p>抗青光眼藥水 (SWS視力保護)</p>
                 </div>
             </div>
         </section>
@@ -220,21 +229,167 @@
                 <div class="flow-split">
                     <div style="display: flex; flex-direction: column; align-items: center; width: 100%;">
                         <div class="flow-node" style="border-color: var(--sage-green);">
-                            <h4 style="color: var(--sage-green);">4a. 治療有效 (血小板回升)</h4>
-                            <p>逐漸減量停用類固醇，<br>維持口服 Sirolimus 兩年，後續定期追蹤。</p>
+                            <h4 style="color: var(--sage-green);">4a. 治療有效 (KHE 縮小)</h4>
+                            <p>逐漸減量停用類固醇，<br>維持口服 Sirolimus 兩年。</p>
                         </div>
                     </div>
                     <div style="display: flex; flex-direction: column; align-items: center; width: 100%;">
                         <div class="flow-node danger">
                             <h4>4b. 治療無效或惡化</h4>
-                            <p>啟動第二線治療：加入 <strong>Vincristine</strong> 或考慮動脈栓塞 (Embolization)。</p>
+                            <p>啟動第二線治療：加入 <strong>Vincristine</strong> 或考慮動脈栓塞。</p>
                         </div>
                     </div>
+                </div>
+                <div class="flow-arrow" style="margin-top: 1.5rem;"></div>
+                <div class="flow-node" style="border-color: var(--taupe); background: var(--taupe-light);">
+                    <h4 style="color: var(--text-color);"><i class="fas fa-eye"></i> & <i class="fas fa-brain"></i> 5. SWS 支線：長期神經與眼科追蹤</h4>
+                    <p>針對右臉 PWB，給予**低劑量 Aspirin** 預防中風。<br>若出現癲癇或青光眼，隨時啟動專科症狀控制。</p>
                 </div>
             </div>
         </section>
 
     </main>
+
+    <!-- Medication Modals -->
+    <div id="modal-sirolimus" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal('modal-sirolimus')"><i class="fas fa-times"></i></button>
+            <h2 class="modal-title">Sirolimus (西羅莫司)</h2>
+            <div class="med-detail-box">
+                <h5>主要機轉</h5>
+                <p>屬於 mTOR (哺乳動物雷帕黴素靶蛋白) 抑制劑。能強效阻斷血管內皮生長因子 (VEGF) 的路徑，進而抑制血管與淋巴管的新生，直接從根本抑制 KHE 腫瘤生長。</p>
+                <img src="Mechanism of action of sirolimus.png" alt="Sirolimus Mechanism" loading="lazy">
+            </div>
+            <div class="med-detail-box">
+                <h5>臨床應用優勢</h5>
+                <p>為「口服劑型」，無須像傳統化療藥物施打中央靜脈導管，大幅提升新生兒與嬰幼兒的用藥便利性，並能迅速改善 KMP 造成的凝血功能異常，目前為國際指引首選。</p>
+            </div>
+            <div class="med-detail-box">
+                <h5>潛在副作用與照護重點</h5>
+                <ul>
+                    <li><strong>免疫抑制：</strong> 會使病童容易感染。治療期間需密切防範肺炎，甚至預防性投藥防止「肺囊蟲肺炎 (PJP)」。</li>
+                    <li><strong>疫苗接種：</strong> 嚴禁接種「活毒疫苗」（如卡介苗、水痘疫苗等）。</li>
+                    <li><strong>常見不適：</strong> 口腔潰瘍、腸胃不適。需嚴密抽血監測藥物血中濃度 (Trough levels)。</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-corticosteroids" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal('modal-corticosteroids')"><i class="fas fa-times"></i></button>
+            <h2 class="modal-title">Corticosteroids (全身性皮質類固醇)</h2>
+            <div class="med-detail-box">
+                <h5>主要機轉</h5>
+                <p>具有強效的抗發炎與免疫調節作用。能減少血管的通透性，降低組織水腫。</p>
+                <img src="Mechanism of action of glucocorticoids.png" alt="Corticosteroids Mechanism" loading="lazy">
+            </div>
+            <div class="med-detail-box">
+                <h5>臨床應用優勢</h5>
+                <p>在治療初期與 Sirolimus 合併使用，能極快速地穩定急速惡化的腫瘤發炎反應與腫脹。</p>
+            </div>
+            <div class="med-detail-box">
+                <h5>潛在副作用與照護重點</h5>
+                <ul>
+                    <li><strong>發育影響：</strong> 長期使用會嚴重影響嬰幼兒的生長發育。</li>
+                    <li><strong>外觀改變：</strong> 易引發庫欣氏症候群症狀（如月亮臉、水牛肩）。</li>
+                    <li><strong>照護策略：</strong> 定位為「初期過渡性治療」。待病情穩定後，必須謹遵醫囑「逐漸減量 (Weaning)」至停藥，切勿擅自驟然停藥以免引發腎上腺危象。</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-vincristine" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal('modal-vincristine')"><i class="fas fa-times"></i></button>
+            <h2 class="modal-title">Vincristine (長春新鹼)</h2>
+            <div class="med-detail-box">
+                <h5>主要機轉</h5>
+                <p>為傳統的化學治療藥物。透過結合微管蛋白，抑制細胞有絲分裂，從而促進異常增生的血管內皮細胞凋亡 (Apoptosis)。</p>
+                <img src="vincristine mechanism.jpg" alt="Vincristine Mechanism" loading="lazy">
+            </div>
+            <div class="med-detail-box">
+                <h5>臨床應用優勢</h5>
+                <p>過去曾是 KHE 的第一線首選，療效確切。目前多退居二線，作為 Sirolimus 治療無效或反應不佳時的救援藥物 (Rescue therapy)。</p>
+            </div>
+            <div class="med-detail-box">
+                <h5>潛在副作用與照護重點</h5>
+                <ul>
+                    <li><strong>強烈發泡劑 (Vesicant)：</strong> 若靜脈注射時發生「漏針(外滲)」，藥物會嚴重侵蝕周邊組織導致壞死。因此**強烈建議透過中央靜脈導管 (CVC)** 給藥。</li>
+                    <li><strong>神經毒性：</strong> 可能引發周邊神經病變、嚴重的便秘（腸道自主神經失調），甚至聲帶麻痺。</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-aspirin" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal('modal-aspirin')"><i class="fas fa-times"></i></button>
+            <h2 class="modal-title">Aspirin (阿斯匹靈)</h2>
+            <div class="med-detail-box">
+                <h5>主要機轉</h5>
+                <p>透過抑制血栓素 (Thromboxane A2) 的合成，發揮強效的「抗血小板凝集」作用。</p>
+                <img src="Mechanism of action of Aspirin.jpg" alt="Aspirin Mechanism" loading="lazy">
+            </div>
+            <div class="med-detail-box">
+                <h5>臨床應用優勢 (一石二鳥的神效)</h5>
+                <p><strong>對抗 KMP：</strong> KHE 腫瘤的特色是異常的血管叢會成為「血小板陷阱」。Aspirin 被用來防止血小板在腫瘤內部持續活化與聚集，打破惡性循環。<br><strong>對抗 SWS：</strong> 針對右臉 PWB 潛在的大腦缺血危機，UpToDate 強烈建議所有 SWS 嬰幼兒使用低劑量 Aspirin (3-5 mg/kg)，可有效預防中風並減少癲癇發作頻率。</p>
+            </div>
+            <div class="med-detail-box">
+                <h5>潛在副作用與照護重點</h5>
+                <ul>
+                    <li><strong>出血風險：</strong> 由於病童本身已經缺乏血小板，使用抗凝血藥物需極度謹慎，密切監測是否有腸胃道出血 (如黑便) 或其他部位的異常出血。</li>
+                    <li><strong>用藥指徵：</strong> 必須由血液腫瘤科醫師根據抽血報告精準拿捏劑量。</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-antiseizure" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal('modal-antiseizure')"><i class="fas fa-times"></i></button>
+            <h2 class="modal-title">Antiseizure Meds (抗癲癇藥物)</h2>
+            <div class="med-detail-box">
+                <h5>主要機轉</h5>
+                <p>如 Carbamazepine 或 Oxcarbazepine，透過穩定神經細胞膜上的鈉離子通道，抑制神經細胞異常放電。</p>
+                <img src="Mechanism of Action of Carbamazepine.webp" alt="Carbamazepine Mechanism" loading="lazy">
+            </div>
+            <div class="med-detail-box">
+                <h5>臨床應用優勢</h5>
+                <p>高達 80% 的 SWS 病童會發展出癲癇。抗癲癇藥物是 SWS 神經學症狀的第一線標準治療，用以控制並減少發作次數。</p>
+            </div>
+            <div class="med-detail-box">
+                <h5>潛在副作用與照護重點</h5>
+                <ul>
+                    <li><strong>難治性癲癇：</strong> SWS 引發的癲癇往往非常頑固。若多種藥物控制無效，最終可能需要考慮進行半腦切除術 (Hemispherectomy)。</li>
+                    <li><strong>副作用：</strong> 嗜睡、頭暈、皮疹等。需長期穩定服藥，不可擅自停藥。</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-glaucoma" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal('modal-glaucoma')"><i class="fas fa-times"></i></button>
+            <h2 class="modal-title">Anti-glaucoma Drops (抗青光眼藥水)</h2>
+            <div class="med-detail-box">
+                <h5>主要機轉</h5>
+                <p>透過減少房水生成 (如 Beta-blockers) 或增加房水排出 (如前列腺素衍生物)，降低眼內壓。</p>
+                <img src="pharmacological mode of action of β-blockers.jpg" alt="Anti-glaucoma Mechanism" loading="lazy">
+            </div>
+            <div class="med-detail-box">
+                <h5>臨床應用優勢</h5>
+                <p>約有 50% 的 SWS 病患會併發青光眼（主要發生於 PWB 影響到上眼瞼的患者）。局部點眼藥水是控制眼壓、保護視神經的第一道防線。</p>
+            </div>
+            <div class="med-detail-box">
+                <h5>潛在副作用與照護重點</h5>
+                <ul>
+                    <li><strong>持續追蹤：</strong> 青光眼可能在出生時發生 (牛眼)，也可能在成人期才出現。必須終身定期進行眼科檢查。</li>
+                    <li><strong>手術介入：</strong> 藥物控制往往效果有限，多數 SWS 的青光眼患者最終需要進行手術治療。</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
